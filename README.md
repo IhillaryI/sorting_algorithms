@@ -1,6 +1,6 @@
 # Sorting Algorithms
-This repo is a project based repo, that shows knowledged gained from workingon tasks and learning resources.
-This is in fullfillment of the Alx requirements
+This repo is a project based repo, that shows knowledged gained from working on tasks and learning from learning resources.
+This is in fulfillment of the Alx General requirements.
 Below is a list of files in this repository
 
 ---
