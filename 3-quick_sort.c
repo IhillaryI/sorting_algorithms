@@ -28,13 +28,13 @@ void quick_s(int *array, int lo, int hi, size_t size)
 {
 	int p;
 
-	if (lo >= hi || lo < 0)
-		return;
+	if (lo < hi)
+	{
+		p = partition(array, lo, hi, size);
 
-	p = partition(array, lo, hi, size);
-
-	quick_s(array, lo, p - 1, size);
-	quick_s(array, p + 1, hi, size);
+		quick_s(array, lo, p - 1, size);
+		quick_s(array, p + 1, hi, size);
+	}
 }
 
 /**
@@ -54,9 +54,9 @@ int partition(int *array, int lo, int hi, size_t size)
 	pivot = array[hi];
 
 	i = lo - 1;
-	for (j = lo; j < hi; ++j)
+	for (j = lo; j <= hi - 1; ++j)
 	{
-		if (array[j] <= pivot)
+		if (array[j] < pivot)
 		{
 			++i;
 			swap(&array[i], &array[j]);
