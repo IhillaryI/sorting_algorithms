@@ -60,7 +60,7 @@ int partition(int *array, int lo, int hi, size_t size)
 		{
 			++i;
 			swap(&array[i], &array[j]);
-			/*print_array(array, size);*/
+			print_array(array, size);
 		}
 	}
 
