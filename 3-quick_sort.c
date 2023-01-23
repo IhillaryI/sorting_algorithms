@@ -12,6 +12,8 @@ int partition(int *array, int, int, size_t);
  */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size <= 0)
+		return;
 	quick_s(array, 0, size - 1, size);
 }
 
@@ -20,6 +22,7 @@ void quick_sort(int *array, size_t size)
  * @array: the array to sort
  * @lo: the begining of the array
  * @hi: the last element of the array
+ * @size: size of the array
  */
 void quick_s(int *array, int lo, int hi, size_t size)
 {
@@ -39,6 +42,7 @@ void quick_s(int *array, int lo, int hi, size_t size)
  * for the quick_sort
  * @array: the given array to sort
  * @lo: the begining of the array
+ * @size: size of the array
  * @hi: the end of the array
  * Return: the partition value
  */
