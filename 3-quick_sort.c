@@ -12,7 +12,7 @@ int partition(int *array, int, int, size_t);
  */
 void quick_sort(int *array, size_t size)
 {
-	if (array == NULL || size < 0)
+	if (array == NULL)
 		return;
 	quick_s(array, 0, size - 1, size);
 }
